@@ -1,5 +1,6 @@
 ## LATEST Changes
-
+* Corrected the Semantic Segmentation camera class table in `Docs/ref_sensors.md` to match the actual 28-class taxonomy defined in `ObjectLabel.h` and `CityScapesPalette.h`.
+  The previous table reflected the legacy 0.8.x CityScapes taxonomy (22 classes), which caused mismatches between documentation and engine output. This update aligns the documentation with the true engine enum values and RGB palette, preventing ground-truth mapping errors when building perception pipelines.
 * Enabled the LibCarla GoogleTest suite (server + client) on ue5-dev and gated both in CI.
 * Fixed Digital Twin Tool crashes on dense metropolitan OSM data, vegetation spawning inside driving lanes on rural maps, and one-way streets being silently excluded from generation (#9565, #9678)
 * Added Ubuntu 24.04 support alongside Ubuntu 22.04
